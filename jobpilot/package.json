@@ -1,0 +1,18 @@
+{
+  "name": "jobpilot",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names api,web --prefix-colors blue,green \"npm run dev --workspace jobpilot-api\" \"npm run dev --workspace jobpilot-web\"",
+    "worker": "npm run worker --workspace jobpilot-api",
+    "migrate": "npm run migrate --workspace jobpilot-api",
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
