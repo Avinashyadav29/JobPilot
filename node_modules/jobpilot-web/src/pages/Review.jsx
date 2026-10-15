@@ -47,7 +47,7 @@ export default function Review() {
 
   return (
     <>
-      <div className="row"><h2>Review queue</h2><button onClick={load}>Refresh</button></div>
+      <div className="row review-toolbar"><button onClick={load}>Refresh</button></div>
       <h3>Matches waiting for your decision</h3>
       {jobs.length === 0 && <p className="muted">Nothing waiting. Sync Gmail in Settings or add a test job.</p>}
       {jobs.map((j) => (

@@ -27,7 +27,6 @@ export default function Kanban() {
 
   return (
     <>
-      <h2>Kanban</h2>
       <form className="inline" onSubmit={add}>
         <input placeholder="Company" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} required />
         <input placeholder="Job title" value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} required />

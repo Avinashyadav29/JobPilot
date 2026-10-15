@@ -13,7 +13,6 @@ export default function Dashboard({ go }) {
   const max = Math.max(1, ...s.weekly.map((w) => w.n));
   return (
     <>
-      <h2>Dashboard</h2>
       <div className="stats">
         <div className="card"><span className="muted">Tracked</span><b>{total}</b></div>
         <div className="card"><span className="muted">Applied</span><b>{s.stages.applied || 0}</b></div>
@@ -32,7 +31,7 @@ export default function Dashboard({ go }) {
       </div>
       <div className="card">
         <h3>Recent</h3>
-        {apps.length === 0 && <p className="muted">No applications yet. Add one on the Kanban page.</p>}
+        {apps.length === 0 && <p className="muted">No applications yet. Add one on the Applications page.</p>}
         {apps.map((a) => (
           <div key={a.id} className="row"><span>{a.title} <span className="muted">@ {a.company}</span></span><span className={`pill ${a.stage}`}>{a.stage}</span></div>
         ))}

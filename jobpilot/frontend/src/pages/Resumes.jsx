@@ -22,7 +22,6 @@ export default function Resumes() {
 
   return (
     <>
-      <h2>Resumes</h2>
       <p className="muted">The master resume is what job matches are scored against. Tailored versions are created from it.</p>
       <div className="card">
         <label>Upload PDF or TXT<input type="file" accept=".pdf,.txt" onChange={upload} /></label>

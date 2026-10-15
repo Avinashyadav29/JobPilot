@@ -23,7 +23,6 @@ export default function Settings() {
 
   return (
     <>
-      <h2>Settings</h2>
       {msg && <p className="muted">{msg}</p>}
       <div className="card">
         <label>Match threshold: {s.match_threshold}%<input type="range" min="40" max="95" value={s.match_threshold} onChange={(e) => setS({ ...s, match_threshold: e.target.value })} /></label>
